@@ -41,14 +41,14 @@ export const FeedbackSection = () => {
 
   return (
     <section
-      className="relative w-full h-[597px] rounded-[35px] overflow-hidden bg-[linear-gradient(180deg,rgba(10,10,16,1)_0%,rgba(23,33,55,0)_100%)]"
+      className="relative w-full rounded-[20px] sm:rounded-[35px] overflow-hidden bg-[linear-gradient(180deg,rgba(10,10,16,1)_0%,rgba(23,33,55,0)_100%)] h-[350px] sm:h-[450px] md:h-[597px]"
       style={{
         border: "none",
       }}
     >
       {/* Golden gradient border via pseudo-element simulation using a wrapper */}
       <div
-        className="absolute inset-0 rounded-[35px] pointer-events-none z-[1]"
+        className="absolute inset-0 rounded-[20px] sm:rounded-[35px] pointer-events-none z-[1]"
         style={{
           padding: "1px",
           background:
@@ -61,9 +61,9 @@ export const FeedbackSection = () => {
       />
 
       {/* Title */}
-      <div className="absolute top-[52px] left-0 right-0 flex items-center justify-center h-11">
+      <div className="absolute top-6 sm:top-[40px] md:top-[52px] left-0 right-0 flex items-center justify-center h-8 sm:h-11">
         <span
-          className="[font-family:'Montserrat',Helvetica] font-bold text-4xl text-center tracking-[1.26px] leading-[43.1px] whitespace-nowrap"
+          className="[font-family:'Montserrat',Helvetica] font-bold text-lg sm:text-2xl md:text-4xl text-center tracking-[1.26px] leading-tight sm:leading-[43.1px] whitespace-nowrap"
           style={{
             background:
               "linear-gradient(315deg,rgba(255,229,161,1) 0%,rgba(191,132,26,1) 51%,rgba(255,205,116,1) 100%)",
@@ -78,18 +78,18 @@ export const FeedbackSection = () => {
       </div>
 
       {/* Feedback options row */}
-      <div className="absolute top-[126px] left-0 right-0 flex flex-row items-end justify-around px-6">
+      <div className="absolute top-16 sm:top-[90px] md:top-[126px] left-0 right-0 flex flex-wrap flex-row items-end justify-around px-2 sm:px-6 gap-y-4">
         {feedbackOptions.map((option, index) => (
           <div
             key={index}
-            className="flex flex-col items-center cursor-pointer"
+            className="flex flex-col items-center cursor-pointer w-1/3 sm:w-auto"
           >
             <img
-              className="object-cover w-[150px] h-[200px]"
+              className="object-cover w-[70px] h-[90px] sm:w-[110px] sm:h-[150px] md:w-[150px] md:h-[200px]"
               alt={option.alt}
               src={option.src}
             />
-            <div className="[font-family:'Montserrat',Helvetica] font-normal text-white text-xl text-center tracking-[0] leading-[30px] mt-2">
+            <div className="[font-family:'Montserrat',Helvetica] font-normal text-white text-xs sm:text-base md:text-xl text-center tracking-[0] leading-[18px] sm:leading-[24px] md:leading-[30px] mt-1 sm:mt-2">
               {option.multiLine
                 ? option.label.split("\n").map((line, i) => (
                     <span key={i}>

@@ -85,36 +85,36 @@ export const ProjectsGallerySection = () => {
   };
 
   return (
-    <section className="relative w-full h-[665px] bg-[linear-gradient(90deg,rgba(20,10,46,1)_0%,rgba(10,10,26,1)_60%,rgba(5,38,56,1)_100%)] overflow-hidden">
+    <section className="relative w-full bg-[linear-gradient(90deg,rgba(20,10,46,1)_0%,rgba(10,10,26,1)_60%,rgba(5,38,56,1)_100%)] overflow-hidden h-[350px] sm:h-[500px] md:h-[600px] lg:h-[665px]">
       {/* Wave background image */}
       <img
-        className="absolute w-[104.17%] h-[75.19%] top-[42.11%] left-0 pointer-events-none"
+        className="absolute w-full h-[40%] sm:h-[55%] md:w-[104.17%] md:h-[75.19%] top-[42%] left-0 pointer-events-none"
         alt="Wave"
         src="/wave-1-1.png"
       />
 
       {/* Header row */}
-      <div className="absolute top-14 left-20 flex items-center gap-0">
+      <div className="absolute z-10 left-4 top-6 sm:left-10 sm:top-10 md:left-20 md:top-14 flex items-center gap-0">
         <span className="[font-family:'Inter',Helvetica] font-medium text-[#c8a84b] text-[10px] tracking-[5.00px] leading-[normal] whitespace-nowrap">
           SELECTED WORK
         </span>
       </div>
 
       {/* Divider line */}
-      <div className="absolute top-[63px] left-[280px] w-[1100px] h-px bg-[#c8a84b] opacity-[0.14]" />
+      <div className="hidden md:block absolute top-[63px] left-[40px] md:left-[280px] w-[90vw] md:w-[1100px] h-px bg-[#c8a84b] opacity-[0.14]" />
 
       {/* Projects label */}
-      <div className="absolute top-20 left-20 opacity-45 [font-family:'Inter',Helvetica] font-normal text-[#898999] text-xs tracking-[0.50px] leading-[normal]">
+      <div className="absolute left-4 top-12 sm:left-10 sm:top-16 md:left-20 md:top-20 opacity-45 [font-family:'Inter',Helvetica] font-normal text-[#898999] text-xs tracking-[0.50px] leading-[normal] z-10">
         Projects
       </div>
 
       {/* Cards area */}
-      <div className="absolute top-[137px] left-0 w-full h-[416px]">
+      <div className="absolute top-[80px] sm:top-[110px] md:top-[137px] left-0 w-full h-[220px] sm:h-[320px] md:h-[416px]">
         {/* Left fade gradient */}
-        <div className="absolute top-0 left-0 w-[70px] h-[416px] bg-[linear-gradient(90deg,rgba(10,10,15,1)_0%,rgba(10,10,15,0)_100%)] z-10 pointer-events-none" />
+        <div className="absolute top-0 left-0 w-[30px] sm:w-[50px] md:w-[70px] h-full bg-[linear-gradient(90deg,rgba(10,10,15,1)_0%,rgba(10,10,15,0)_100%)] z-10 pointer-events-none" />
 
         {/* Right fade gradient */}
-        <div className="absolute top-0 right-0 w-[70px] h-[416px] bg-[linear-gradient(90deg,rgba(10,10,15,0)_0%,rgba(10,10,15,1)_100%)] z-10 pointer-events-none" />
+        <div className="absolute top-0 right-0 w-[30px] sm:w-[50px] md:w-[70px] h-full bg-[linear-gradient(90deg,rgba(10,10,15,0)_0%,rgba(10,10,15,1)_100%)] z-10 pointer-events-none" />
 
         {/* Scrollable cards container */}
         <div

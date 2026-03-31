@@ -51,7 +51,7 @@ const decorativeElements = [
 
 export const HomePage = () => {
   return (
-    <main className="bg-[#0a0a0f] overflow-hidden w-full min-w-[1440px] flex flex-col">
+    <main className="bg-[#0a0a0f] overflow-hidden w-full flex flex-col">
       {/* Hero header area - fixed height to contain absolutely positioned elements */}
       <header className="relative w-full h-[700px]">
         {/* Background gradient blur */}
